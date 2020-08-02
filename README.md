@@ -8,5 +8,7 @@ def scrape():
    mars_data = scraping.scrape_all()
    mars.update({}, mars_data, upsert=True)
    return render_template("return.html", mars=mars)
-Flow
+   
+   
+# Flow
 Above code will call function scrape_all() from scraping.py file. Which will use spliter and Beautifulsoup to get data from website and return dictonary to API. API will connect to MongoDB and update the informaiton in specified database and specified collection. Index.html will go and get the data from MongoDB and render it on webpage using template speficied in index.html.
