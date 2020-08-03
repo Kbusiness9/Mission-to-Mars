@@ -2,12 +2,7 @@
 Localhost
 When we run flask app first page will have option to scrape the data via button or http://127.0.0.1:5000/scrape, will start scraping the data from 'https://mars.nasa.gov/news/'. Code in app.py to start the scraping:
 
-@app.route("/scrape")
-def scrape():
-   mars = mongo.db.mars
-   mars_data = scraping.scrape_all()
-   mars.update({}, mars_data, upsert=True)
-   return render_template("return.html", mars=mars)
+
    
    
 # Flow
